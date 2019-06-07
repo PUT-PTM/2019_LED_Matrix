@@ -1,0 +1,6 @@
+﻿  main.cpp
+  Linking ../VisualGDB/Debug/MAX7219...
+  ------------------- Memory utilization report -------------------
+  Used FLASH: 181KB out of 1024KB (17%) [+72]
+  Used SRAM: 6660 bytes out of 128KB (5%)
+  Used CCMRAM: 0 bytes out of 64KB (0%)
