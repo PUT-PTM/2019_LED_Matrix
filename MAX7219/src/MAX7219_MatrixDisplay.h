@@ -9,8 +9,9 @@
 template<std::size_t X, std::size_t Y>
 class MAX7219_MatrixDisplay {
 
+	//SIZE OF OUR LED MATRIX
     MAX7219<X * Y> &max;
-
+	//ARRAY CONTAINING WRITTEN VALUES
     typedef std::array<uint8_t, X * Y> DigitData;
     std::array<DigitData, 8> buffer;
 
@@ -27,7 +28,7 @@ public:
     MAX7219_MatrixDisplay(MAX7219<X * Y> &max)
             : max(max) {
     }
-
+	//TURNS ON OR OFF THE (x,y)PIXEL
     void writePixel(uint8_t x, uint8_t y, bool value) {
         if (value) {
             getByte(x, y) |= 1 << (x % 8);
@@ -35,11 +36,11 @@ public:
             getByte(x, y) &= ~(1 << (x % 8));
         }
     }
-
+	//GETS STATE OF A PIXEL
     bool getPixel(uint8_t x, uint8_t y) {
         return static_cast<bool>(getByte(x, y) & (1 << (x % 8)));
     }
-
+	//SAVE CHANGES TO Display's REGISTES
     void write() {
         for (uint8_t i = 0; i < 8; i++) {
             max.sendDigit(i, buffer[i]);
@@ -120,7 +121,7 @@ public:
 			
 		}
 	}
-	
+	//CLEAN THE MATRIX
 	void clear()
 	{
 		for (int x = 0; x < 32; x++)
@@ -130,6 +131,7 @@ public:
 		}
 		this->write();
 	}
+	//TURN ALL PIXELS ON
 	void fill()
 	{
 		for (int x = 0; x < 32; x++)
@@ -139,7 +141,8 @@ public:
 		}
 		this->write();
 	}
-		
+	
+	//DISPLAY A STRING ON THE MATRIX
 	void writeString(std::string str)
 	{
 		if (str == "_RES")

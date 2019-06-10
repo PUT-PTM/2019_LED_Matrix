@@ -4,6 +4,8 @@
 #include <array>
 #include <string>
 #include <bitset>
+
+//CHARS LIB FOR MatrixDisplay's writeString Method
 class Letters
 {
 public:

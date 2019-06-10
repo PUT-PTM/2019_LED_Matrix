@@ -249,9 +249,6 @@
     <None Include="stm32.xml">
       <Filter>VisualGDB settings</Filter>
     </None>
-    <ClCompile Include="Src\example.cpp">
-      <Filter>Source files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\MAX7219.cpp">
       <Filter>Source files</Filter>
     </ClCompile>

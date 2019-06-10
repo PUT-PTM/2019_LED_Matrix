@@ -107,7 +107,7 @@ int main(void)
 	MX_USART1_UART_Init();
 
 	HAL_UART_Receive_IT(&huart1, receiveUART, sizeReceiveUART);
-
+	//LED MATRIX REGISTERS onTurnOn INITIALIZATION
 	max.powerOn();
 	max.intensity(5);
 	max.scanLimit(7);

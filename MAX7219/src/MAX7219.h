@@ -6,12 +6,15 @@
 #include "MAX7219_Register.h"
 #include "MAX7219_Pin.h"
 
+//IT CREATES INSTANCE REFERENCING ACTUAL MATRIX IN OUR CODE
+
 template<std::size_t N>
 class MAX7219 {
 
     SPI_HandleTypeDef &spi;
     MAX7219_Pin cs;
-
+	
+	//SENDS DATA TO THE MATRIX
     template<std::size_t Length>
     void sendPackets(const std::array<uint16_t, Length> &packets) {
         cs.low();
@@ -26,7 +29,7 @@ class MAX7219 {
         }
         sendPackets(packets);
     }
-
+	//PACKS THE DATA TO A VALID FORMAT
     uint16_t makePacket(MAX7219_Register reg, uint8_t value) {
         return (static_cast<uint8_t >(reg) << 8) | value;
     }
@@ -36,7 +39,8 @@ public:
     MAX7219(SPI_HandleTypeDef &spi, MAX7219_Pin cs)
             : spi(spi), cs(cs) {
     }
-
+	
+	//HANDLE BUILD-IN MATRIX FUNCTIONS
     void powerOn() {
         sendPacket(MAX7219_Register::Shutdown, 1);
     }

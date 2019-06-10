@@ -154,7 +154,7 @@ VisualGDB/Debug/main.o: main.cpp \
  c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\bits\stl_relops.h \
  ../src/MAX7219_Register.h ../src/MAX7219_Pin.h \
  ../src/MAX7219_MatrixDisplay.h ../src/MAX7219.h \
- D:/MAX7219_old/MAX7219/example/Letters.h \
+ C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/example/Letters.h \
  c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\vector \
  c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\bits\stl_construct.h \
  c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\bits\stl_uninitialized.h \
@@ -485,7 +485,7 @@ c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\bits\stl_relops.h:
 
 ../src/MAX7219.h:
 
-D:/MAX7219_old/MAX7219/example/Letters.h:
+C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/example/Letters.h:
 
 c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\vector:
 

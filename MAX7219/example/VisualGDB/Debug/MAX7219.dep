@@ -1,5 +1,6 @@
-VisualGDB/Debug/MAX7219.o: D:/MAX7219_old/MAX7219/src/MAX7219.cpp \
- D:/MAX7219_old/MAX7219/src/MAX7219.h \
+VisualGDB/Debug/MAX7219.o: \
+ C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/src/MAX7219.cpp \
+ C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/src/MAX7219.h \
  c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\array \
  c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\utility \
  c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\arm-eabi\thumb\cortex_m4\bits\c++config.h \
@@ -131,10 +132,10 @@ VisualGDB/Debug/MAX7219.o: D:/MAX7219_old/MAX7219/src/MAX7219.cpp \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- D:/MAX7219_old/MAX7219/src/MAX7219_Register.h \
- D:/MAX7219_old/MAX7219/src/MAX7219_Pin.h
+ C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/src/MAX7219_Register.h \
+ C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/src/MAX7219_Pin.h
 
-D:/MAX7219_old/MAX7219/src/MAX7219.h:
+C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/src/MAX7219.h:
 
 c:\sysgcc\arm-eabi\arm-eabi\include\c++\7.2.0\array:
 
@@ -402,6 +403,6 @@ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 
-D:/MAX7219_old/MAX7219/src/MAX7219_Register.h:
+C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/src/MAX7219_Register.h:
 
-D:/MAX7219_old/MAX7219/src/MAX7219_Pin.h:
+C:/Users/Maciej/Desktop/2019_LED_Matrix-master/MAX7219/src/MAX7219_Pin.h:
