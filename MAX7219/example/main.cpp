@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : main.c
+  * @file           : main.cpp
   * @brief          : Main program body
   ******************************************************************************
   ** This notice applies to any and all portions of this file
@@ -48,27 +48,7 @@
 #include "main.h"
 #include "MAX7219.h"
 #include "MAX7219_MatrixDisplay.h"
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
 
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
 
 UART_HandleTypeDef huart1;
@@ -76,24 +56,18 @@ UART_HandleTypeDef huart1;
 MAX7219<4> max(hspi1, { GPIOA, GPIO_PIN_4 });
 MAX7219_MatrixDisplay<4, 1> display(max);
 
-/* USER CODE BEGIN PV */
-/* Private variables ---------------------------------------------------------*/
 uint8_t receiveUART[4] = {32,32,32,32};
 uint16_t sizeReceiveUART = 4;
 std::string mystring;
 
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_USART1_UART_Init(void);
-/* USER CODE BEGIN PFP */
-/* Private function prototypes -----------------------------------------------*/
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 	if (huart->Instance == USART1) {
-		// tutaj umieszczamy kod wykonywany po otrzymaniu bajtu
+
 			std::array<uint8_t, 4> msg = {32,32,32,32};
 			for (uint8_t a : receiveUART)
 			{
@@ -122,57 +96,25 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 }
 
 extern void example();
-/* USER CODE END PFP */
 
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
 int main(void)
 {
-	/* USER CODE BEGIN 1 */
 
-	/* USER CODE END 1 */
-
-	/* MCU Configuration--------------------------------------------------------*/
-
-	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
 	HAL_Init();
 
-	/* USER CODE BEGIN Init */
-
-	/* USER CODE END Init */
-
-	/* Configure the system clock */
 	SystemClock_Config();
 
-	/* USER CODE BEGIN SysInit */
-
-	/* USER CODE END SysInit */
-
-	/* Initialize all configured peripherals */
 	MX_GPIO_Init();
 	MX_SPI1_Init();
 	MX_USART1_UART_Init();
-	/* USER CODE BEGIN 2 */
+
 	HAL_UART_Receive_IT(&huart1, receiveUART, sizeReceiveUART);
 
 	max.powerOn();
 	max.intensity(5);
 	max.scanLimit(7);
 
-	int count = 0;
-
-
-	/* Infinite loop */
-	/* USER CODE BEGIN WHILE */
 	while (true) {
-		// Example using MAX7219_MatrixDisplay
 		if(mystring == "_RES")
 		{
 			display.writeString(mystring);	
@@ -182,24 +124,17 @@ int main(void)
 			display.writeString(mystring);
 		HAL_Delay(30);
 	}
-	/* USER CODE END 3 */
 }
 
-/**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+
 void SystemClock_Config(void)
 {
 	RCC_OscInitTypeDef RCC_OscInitStruct = { 0 };
 	RCC_ClkInitTypeDef RCC_ClkInitStruct = { 0 };
 
-	/**Configure the main internal regulator output voltage 
-	*/
 	__HAL_RCC_PWR_CLK_ENABLE();
 	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
-	/**Initializes the CPU, AHB and APB busses clocks 
-	*/
+
 	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
 	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
 	RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -208,8 +143,7 @@ void SystemClock_Config(void)
 	{
 		Error_Handler();
 	}
-	/**Initializes the CPU, AHB and APB busses clocks 
-	*/
+
 	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
 	                            | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
 	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
@@ -223,22 +157,8 @@ void SystemClock_Config(void)
 	}
 }
 
-/**
-  * @brief SPI1 Initialization Function
-  * @param None
-  * @retval None
-  */
 static void MX_SPI1_Init(void)
 {
-
-	/* USER CODE BEGIN SPI1_Init 0 */
-
-	/* USER CODE END SPI1_Init 0 */
-
-	/* USER CODE BEGIN SPI1_Init 1 */
-
-	/* USER CODE END SPI1_Init 1 */
-	/* SPI1 parameter configuration*/
 	hspi1.Instance = SPI1;
 	hspi1.Init.Mode = SPI_MODE_MASTER;
 	hspi1.Init.Direction = SPI_DIRECTION_2LINES;
@@ -255,27 +175,12 @@ static void MX_SPI1_Init(void)
 	{
 		Error_Handler();
 	}
-	/* USER CODE BEGIN SPI1_Init 2 */
-
-	/* USER CODE END SPI1_Init 2 */
 
 }
 
-/**
-  * @brief USART1 Initialization Function
-  * @param None
-  * @retval None
-  */
 static void MX_USART1_UART_Init(void)
 {
 
-	/* USER CODE BEGIN USART1_Init 0 */
-
-	/* USER CODE END USART1_Init 0 */
-
-	/* USER CODE BEGIN USART1_Init 1 */
-
-	/* USER CODE END USART1_Init 1 */
 	huart1.Instance = USART1;
 	huart1.Init.BaudRate = 115200;
 	huart1.Init.WordLength = UART_WORDLENGTH_8B;
@@ -288,17 +193,9 @@ static void MX_USART1_UART_Init(void)
 	{
 		Error_Handler();
 	}
-	/* USER CODE BEGIN USART1_Init 2 */
-
-	/* USER CODE END USART1_Init 2 */
 
 }
 
-/**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
 static void MX_GPIO_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = { 0 };
@@ -318,20 +215,9 @@ static void MX_GPIO_Init(void)
 
 }
 
-/* USER CODE BEGIN 4 */
-
-/* USER CODE END 4 */
-
-/**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
 void Error_Handler(void)
 {
-	/* USER CODE BEGIN Error_Handler_Debug */
-	/* User can add his own implementation to report the HAL error return state */
 
-	/* USER CODE END Error_Handler_Debug */
 }
 
 #ifdef  USE_FULL_ASSERT
@@ -350,5 +236,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 	/* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

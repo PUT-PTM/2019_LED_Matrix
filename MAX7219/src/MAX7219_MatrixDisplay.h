@@ -150,172 +150,198 @@ public:
 			max.scanLimit(7);
 			this->fill();
 		}
-		Letters let;
-		for (int i = 0; i < str.length(); i++)
+		else if (str == "_CLN")
 		{
-			switch ((int)str[i])
+			this->clear();
+		}
+		else
+		{
+			Letters let;
+			for (int i = 0; i < str.length(); i++)
 			{
-			case 65://A	
-				for (std::vector<std::pair<int, int>>::iterator it = let.A.begin(); it != let.A.end(); ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 66://B
-				for (std::vector<std::pair<int, int>>::iterator it = let.B.begin(); it != let.B.end(); ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 67://C
-				for (std::vector<std::pair<int, int>>::iterator it = let.C.begin(); it != let.C.end(); ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 68: //D
-				for(std::vector<std::pair<int, int>>::iterator it = let.D.begin() ; it != let.D.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 69: //E
-				for(std::vector<std::pair<int, int>>::iterator it = let.E.begin() ; it != let.E.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 70: //F
-				for(std::vector<std::pair<int, int>>::iterator it = let.F.begin() ; it != let.F.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 71: //G
-					for(std::vector<std::pair<int, int>>::iterator it = let.G.begin() ; it != let.G.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 72: //H
-					for(std::vector<std::pair<int, int>>::iterator it = let.H.begin() ; it != let.H.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 73: //I
-					for(std::vector<std::pair<int, int>>::iterator it = let.I.begin() ; it != let.I.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();	
-				}
-				break;
-			case 74: //J
-					for(std::vector<std::pair<int, int>>::iterator it = let.J.begin() ; it != let.J.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 75: //K
-					for(std::vector<std::pair<int, int>>::iterator it = let.K.begin() ; it != let.K.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 76: //L
-				for(std::vector<std::pair<int, int>>::iterator it = let.L.begin() ; it != let.L.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 77: //M
-				for(std::vector<std::pair<int, int>>::iterator it = let.M.begin() ; it != let.M.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 78: //N
-				for(std::vector<std::pair<int, int>>::iterator it = let.N.begin() ; it != let.N.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 79: //O
-				for(std::vector<std::pair<int, int>>::iterator it = let.O.begin() ; it != let.O.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 80: //P
-				for(std::vector<std::pair<int, int>>::iterator it = let.P.begin() ; it != let.P.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 82: //R
-				for(std::vector<std::pair<int, int>>::iterator it = let.R.begin() ; it != let.R.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 83: //S
-				for(std::vector<std::pair<int, int>>::iterator it = let.S.begin() ; it != let.S.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 84: //T
-				for(std::vector<std::pair<int, int>>::iterator it = let.T.begin() ; it != let.T.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 85: //U
-				for(std::vector<std::pair<int, int>>::iterator it = let.U.begin() ; it != let.U.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 87: //W
-				for(std::vector<std::pair<int, int>>::iterator it = let.W.begin() ; it != let.W.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 88: //X
-				for(std::vector<std::pair<int, int>>::iterator it = let.X.begin() ; it != let.X.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 89: //Y
-				for(std::vector<std::pair<int, int>>::iterator it = let.Y.begin() ; it != let.Y.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 90: //Z
-for(std::vector<std::pair<int, int>>::iterator it = let.Z.begin() ; it != let.Z.end() ; ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			case 95://_
-				for (std::vector<std::pair<int, int>>::iterator it = let.DASH.begin(); it != let.DASH.end(); ++it) {
-					this->writePixel(it->first + (i * 8), it->second, 1);
-					this->write();
-				}
-				break;
-			
-			case 32://SPACE
-			default:
-				for (int x = i*8; x < i*8+8; x++)
+				switch ((int)str[i])
 				{
-					for(int y=0;y<8;y++)
-						this->writePixel(x,y,0);
+				case 43://+	
+					for (std::vector<std::pair<int, int>>::iterator it = let.PLUS.begin(); it != let.PLUS.end(); ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 47:// /
+					for (std::vector<std::pair<int, int>>::iterator it = let.SLASH.begin(); it != let.SLASH.end(); ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 65://A	
+					for (std::vector<std::pair<int, int>>::iterator it = let.A.begin(); it != let.A.end(); ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 66://B
+					for (std::vector<std::pair<int, int>>::iterator it = let.B.begin(); it != let.B.end(); ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 67://C
+					for (std::vector<std::pair<int, int>>::iterator it = let.C.begin(); it != let.C.end(); ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 68: //D
+					for(std::vector<std::pair<int, int>>::iterator it = let.D.begin() ; it != let.D.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 69: //E
+					for(std::vector<std::pair<int, int>>::iterator it = let.E.begin() ; it != let.E.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 70: //F
+					for(std::vector<std::pair<int, int>>::iterator it = let.F.begin() ; it != let.F.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 71: //G
+						for(std::vector<std::pair<int, int>>::iterator it = let.G.begin() ; it != let.G.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 72: //H
+						for(std::vector<std::pair<int, int>>::iterator it = let.H.begin() ; it != let.H.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 73: //I
+						for(std::vector<std::pair<int, int>>::iterator it = let.I.begin() ; it != let.I.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();	
+					}
+					break;
+				case 74: //J
+						for(std::vector<std::pair<int, int>>::iterator it = let.J.begin() ; it != let.J.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 75: //K
+						for(std::vector<std::pair<int, int>>::iterator it = let.K.begin() ; it != let.K.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 76: //L
+					for(std::vector<std::pair<int, int>>::iterator it = let.L.begin() ; it != let.L.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 77: //M
+					for(std::vector<std::pair<int, int>>::iterator it = let.M.begin() ; it != let.M.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 78: //N
+					for(std::vector<std::pair<int, int>>::iterator it = let.N.begin() ; it != let.N.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 79: //O
+					for(std::vector<std::pair<int, int>>::iterator it = let.O.begin() ; it != let.O.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 80: //P
+					for(std::vector<std::pair<int, int>>::iterator it = let.P.begin() ; it != let.P.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 82: //R
+					for(std::vector<std::pair<int, int>>::iterator it = let.R.begin() ; it != let.R.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 83: //S
+					for(std::vector<std::pair<int, int>>::iterator it = let.S.begin() ; it != let.S.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 84: //T
+					for(std::vector<std::pair<int, int>>::iterator it = let.T.begin() ; it != let.T.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 85: //U
+					for(std::vector<std::pair<int, int>>::iterator it = let.U.begin() ; it != let.U.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 86: //V
+					for(std::vector<std::pair<int, int>>::iterator it = let.V.begin() ; it != let.V.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 87: //W
+					for(std::vector<std::pair<int, int>>::iterator it = let.W.begin() ; it != let.W.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 88: //X
+					for(std::vector<std::pair<int, int>>::iterator it = let.X.begin() ; it != let.X.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 89: //Y
+					for(std::vector<std::pair<int, int>>::iterator it = let.Y.begin() ; it != let.Y.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 90: //Z
+					for(std::vector<std::pair<int, int>>::iterator it = let.Z.begin() ; it != let.Z.end() ; ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+				case 95://_
+					for (std::vector<std::pair<int, int>>::iterator it = let.DASH.begin(); it != let.DASH.end(); ++it) {
+						this->writePixel(it->first + (i * 8), it->second, 1);
+						this->write();
+					}
+					break;
+			
+				case 32://SPACE
+				default:
+					for (int x = i * 8; x < i * 8 + 8; x++)
+					{
+						for (int y = 0; y < 8; y++)
+							this->writePixel(x, y, 0);
+					}
+					break;
 				}
-				break;
 			}
 		}
+		
 
 	}
 

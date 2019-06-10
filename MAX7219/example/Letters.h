@@ -496,4 +496,45 @@ public:
 		std::make_pair(4, 0),
 		std::make_pair(5, 0),	
 	};
+	std::vector<std::pair<int, int>> V = {
+		std::make_pair(1, 2),
+		std::make_pair(1, 3),
+		std::make_pair(1, 4),
+		std::make_pair(1, 5),
+		std::make_pair(1, 6),
+		
+		std::make_pair(5, 2),
+		std::make_pair(5, 3),
+		std::make_pair(5, 4),
+		std::make_pair(5, 5),
+		std::make_pair(5, 6),
+		
+		std::make_pair(2, 1),
+		std::make_pair(4, 1),
+		std::make_pair(3, 0),
+	};
+	std::vector<std::pair<int, int>> PLUS = {
+		std::make_pair(1, 3),
+		std::make_pair(2, 3),
+		std::make_pair(3, 3),
+		std::make_pair(4, 3),
+		std::make_pair(5, 3),
+		
+		std::make_pair(3, 1),
+		std::make_pair(3, 2),
+		std::make_pair(3, 3),
+		std::make_pair(3, 4),
+		std::make_pair(3, 5),
+	};
+	
+	std::vector<std::pair<int, int>> SLASH = {
+		std::make_pair(1, 0),
+		std::make_pair(2, 1),
+		std::make_pair(3, 2),
+		std::make_pair(4, 3),
+		std::make_pair(5, 4),
+		std::make_pair(6, 5),
+		std::make_pair(7, 6),
+	};
+	
 };
