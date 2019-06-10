@@ -48,7 +48,7 @@
     <AllDependencies>
       <ProjectDependency>
         <RelativePath>MAX7219.gpdsc</RelativePath>
-        <Timestamp>132046626960000000</Timestamp>
+        <Timestamp>132046649140159968</Timestamp>
       </ProjectDependency>
     </AllDependencies>
     <RootDirectory>
@@ -268,11 +268,11 @@
       <ImportedConfiguration>
         <Settings>
           <IncludeDirectories>
-            <string>C:\Users\Maciej\Desktop\2019_LED_Matrix-master\MAX7219\example\Inc</string>
-            <string>C:\Users\Maciej\Desktop\2019_LED_Matrix-master\MAX7219\example\Drivers\CMSIS\Include</string>
-            <string>C:\Users\Maciej\Desktop\2019_LED_Matrix-master\MAX7219\example\Drivers\CMSIS\Device\ST\STM32F4xx\Include</string>
-            <string>C:\Users\Maciej\Desktop\2019_LED_Matrix-master\MAX7219\example\Drivers\STM32F4xx_HAL_Driver\Inc</string>
-            <string>C:\Users\Maciej\Desktop\2019_LED_Matrix-master\MAX7219\example\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy</string>
+            <string>C:\Users\Maciej\Documents\GitHub\2019_LED_Matrix\MAX7219\example\Inc</string>
+            <string>C:\Users\Maciej\Documents\GitHub\2019_LED_Matrix\MAX7219\example\Drivers\CMSIS\Include</string>
+            <string>C:\Users\Maciej\Documents\GitHub\2019_LED_Matrix\MAX7219\example\Drivers\CMSIS\Device\ST\STM32F4xx\Include</string>
+            <string>C:\Users\Maciej\Documents\GitHub\2019_LED_Matrix\MAX7219\example\Drivers\STM32F4xx_HAL_Driver\Inc</string>
+            <string>C:\Users\Maciej\Documents\GitHub\2019_LED_Matrix\MAX7219\example\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy</string>
           </IncludeDirectories>
           <PreprocessorMacros>
             <string>$$com.sysprogs.bspoptions.primary_memory$$_layout</string>

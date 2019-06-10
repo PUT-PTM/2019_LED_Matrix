@@ -92,3 +92,13 @@ VisualGDB
 .vs
 VisualGDBCache
 CodeDB
+example/Debug
+example/Release
+example/VisualGDB
+example/*.opensdf
+example/*.sdf
+example/*.suo
+example/*.old
+example/.vs
+example/VisualGDBCache
+example/CodeDB
