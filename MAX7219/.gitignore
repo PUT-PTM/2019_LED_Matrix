@@ -89,7 +89,7 @@ VisualGDB
 *.sdf
 *.suo
 *.old
-.vs
+.vs/
 VisualGDBCache
 CodeDB
 example/Debug
